@@ -166,4 +166,46 @@ print("Tiempo que tardará el turista en llegar a su destino con el metro:", tie
 
 
 #-----
+# Problema 6 - Respuesta:
+# datos del problema:
+# variable dependiente : T(t) = temperatura del servidor en C°
+# Variable independiente : t = tiempo transcurrido desde las 08:00 horas
 
+# 1) Agregando un grafico de la funcion, indicando el dominio contextuado:
+import numpy as np
+import matplotlib.pyplot as plt
+
+inicio = 0
+final = 9
+
+def temperatura(t):
+    return -0.5 * t**2 + 3 * t + 20
+
+tiempos = np.linspace(0, 9, 100)
+temperaturas = temperatura(tiempos)
+
+plt.plot(tiempos, temperaturas)
+plt.xlabel("Tiempo (horas)")
+plt.ylabel("Temperatura (°C)")
+plt.title("Temperatura del Servidor - Problema 6")
+plt.grid()
+plt.show()
+
+# 2) Respuesta de:  Mediante un análisis gráfico, estime cuándo el servidor alcanza la máxima temperatura y calcule cuánto es.
+a = -0.5 
+b = 3
+
+tiempo_maximo = -b / (2 * a)
+temperatura_maxima = temperatura(tiempo_maximo)
+
+print("Temperatura maxima", temperatura_maxima, "°C")
+print("Ocurre", tiempo_maximo, "Hora despues de la 08:00 hrs")
+
+# 3) Respuesta de : Determine la temperatura del servidor a las 13:00 horas y al finalizar la jornada laboral.
+# Vamos a determinar el transcurso de las 13 hrs y la temperatura que tiene:
+temp_13 = temperatura(5)
+print("Tenemos a las 13:00: ", temp_13, "°C")
+
+# tambien vamos a determinar el trascurso de 9 hrs (17:00) y la temperatura que tiene:
+temp_17 = temperatura(9)
+print("Tenemos a las 17:00: ", temp_17, "°C")
