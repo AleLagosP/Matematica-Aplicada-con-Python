@@ -141,3 +141,29 @@ plt.title("Comparación de Distancia Recorrida -  Grafico Problema 5")
 plt.legend()
 plt.grid()
 plt.show()
+
+# 2) Respuesta de: Si se sabe que el metro se demora 1,2 minutos en llegar desde una estación a otra y espera 30 segundos en cada estación, indique el dominio contextualizado para f(t).
+#Datos del caso:
+# Son 9 estaciones, por lo que el tiempo total del metro es de (9 * 1.2) + (9 * 0.5) minutos.
+# Se demora 1.2 minutos en llegar de una estación a otra 
+# espera 30 segundos en cada estación.
+
+tiempo_total_metro = (9 * 1.2) + (9 * 0.5)
+print("Tiempo total del metro:", tiempo_total_metro, "minutos")
+
+# 3) Respuesta de: Mediante análisis gráfico, indique cuál medio de transporte es más conveniente en términos de tiempo, para el turista. Justifique.
+
+# El medio de transporte más conveniente en términos de tiempo para el turista es el metro, ya que recorre una mayor distancia en menos tiempo en comparación con el bus. 
+# Esto se puede observar en el gráfico, donde la pendiente de la línea del metro es más pronunciada que la del bus, indicando que el metro avanza más rápido a lo largo del tiempo.
+
+# 4) Respuesta de: Si se sabe que desde estación La Moneda hasta Tobalaba son aproximadamente 6 kilómetros ¿cuántos tiempo tardará el turista en llegar a su destino con cada una de las opciones?
+#Datos del caso:
+# La distancia entre La Moneda y Tobalaba es de 6 kilómetros.
+# Para el metro, la velocidad es de 0.4 km/h.
+
+tiempo_metro_6km = 6 / 0.4
+print("Tiempo que tardará el turista en llegar a su destino con el metro:", tiempo_metro_6km, "horas")
+
+
+#-----
+
